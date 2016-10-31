@@ -12,7 +12,7 @@ private:
 		Scanner(const std::string& input)
 		{
 			filename = input;
-
+			std::cout << filename;
 		}
 
 		void readlines()
