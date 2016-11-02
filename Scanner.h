@@ -5,15 +5,21 @@
 class Scanner
 {
 private:
-	 std::string filename;
-	 std::ifstream mainfile;
-	public:
+	std::string filename, line; // string
+	std::ifstream mainfile; // file operations
+public:
 
-		Scanner(const std::string& input)
-		{
-			filename = input;
-			std::cout << filename;
+	Scanner(const std::string& input)
+	{
+		filename = input;
+		std::cout << filename;
+		mainfile.open(filename, std::ios::in);
+		if (mainfile.is_open()) {
+			while (std::getline(mainfile, line)) {
+				std::cout << line << '\n';
+			}
 		}
+	}
 
 		void readlines()
 		{
