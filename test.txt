@@ -1,4 +1,4 @@
-this
+int this = 32
 is
 a
 test
